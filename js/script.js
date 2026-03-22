@@ -61,18 +61,20 @@ const translations = {
     // Certificates Modal
     "certificates.title": "My Certificates",
     "certificates.view": "View Certificate",
-    "certificates.cert1.title": "Full Stack Developer",
+    "certificates.cert1.title": "Programming Logic Certification",
     "certificates.cert1.description":
-      "Complete certification in full stack web development",
-    "certificates.cert2.title": "Frontend Development",
+      "Accreditation validating mastery of algorithmic fundamentals and data structures essential for software development",
+    "certificates.cert2.title": "Git & GitHub Professional Certification",
     "certificates.cert2.description":
-      "Specialization in modern frontend development",
-    "certificates.cert3.title": "Backend Development",
+      "Professional certification validating expertise in version control using Git and collaborative workflows on GitHub.",
+    "certificates.cert3.title": "Web Design & Creation Certification",
     "certificates.cert3.description":
-      "Backend development with Node.js and databases",
-    "certificates.cert4.title": "Advanced JavaScript",
+      "Specialized certification in building high-fidelity web interfaces. Focused on semantic layout and visual design to ensure a seamless",
+    "certificates.cert4.title": "React Web Development Certification",
     "certificates.cert4.description":
-      "Advanced JavaScript and modern frameworks",
+      "Advanced specialization in building dynamic Single Page Applications (SPA). Expert in state management, custom hooks.",
+    "certificates.cert5.title": "Backend & Database Integration Certification",
+    "certificates.cert5.description": "Technical certification in server-side architecture and database management. Focused on building robust APIs, data security, and ensuring seamless integration between server-side logic and frontend applications.",
 
     // Toast Messages
     "toast.darkMode": "🌙 Dark mode activated",
@@ -139,18 +141,21 @@ const translations = {
     // Certificates Modal
     "certificates.title": "Mis Certificados",
     "certificates.view": "Ver Certificado",
-    "certificates.cert1.title": "Desarrollador Full Stack",
+    "certificates.cert1.title": "Certificación en Lógica de Programación",
     "certificates.cert1.description":
-      "Certificación completa en desarrollo web full stack",
-    "certificates.cert2.title": "Desarrollo Frontend",
+      "Acreditación que valida el dominio de los fundamentos algorítmicos y estructuras de datos esenciales para el desarrollo de software",
+    "certificates.cert2.title": "Certificación Profesional en Git y GitHub",
     "certificates.cert2.description":
-      "Especialización en desarrollo frontend moderno",
-    "certificates.cert3.title": "Desarrollo Backend",
+      "Certificación profesional que valida la experiencia en control de versiones usando Git y flujos de trabajo colaborativos en GitHub.",
+    "certificates.cert3.title": "Certificación en Creación y Diseño Web",
     "certificates.cert3.description":
-      "Desarrollo backend con Node.js y bases de datos",
-    "certificates.cert4.title": "JavaScript Avanzado",
+      "Capacitación intensiva centrada en la arquitectura y estética de interfaces web funcionales. Especializado en maquetación semántica y diseño visual",
+    "certificates.cert4.title": "Certificación en Desarrollo Web con React",
     "certificates.cert4.description":
-      "JavaScript avanzado y frameworks modernos",
+      "Especialización avanzada en la creación de Single Page Applications (SPA) dinámicas. Experto en la gestión de estados, hooks personalizados.",
+    "certificates.cert5.title":
+      "Certificación en Backend e Integración de Base de Datos",
+    "certificates.cert5.description": "Especialización técnica en el desarrollo de arquitecturas de servidor y gestión de bases de datos. Enfocado en la creación de APIs robustas, seguridad en el manejo de datos y la integración eficiente entre el servidor y el cliente.",
 
     // Toast Messages
     "toast.darkMode": "🌙 Modo oscuro activado",
@@ -200,7 +205,7 @@ function setLanguage(lang) {
     lang === "es"
       ? translations[lang]["toast.langES"]
       : translations[lang]["toast.langEN"],
-    "success"
+    "success",
   );
 }
 
@@ -245,7 +250,7 @@ themeToggle?.addEventListener("click", () => {
     newTheme === "dark"
       ? translations[currentLang]["toast.darkMode"]
       : translations[currentLang]["toast.lightMode"],
-    "success"
+    "success",
   );
 });
 
@@ -266,7 +271,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all sections and detail containers
 document.addEventListener("DOMContentLoaded", () => {
   const elementsToAnimate = document.querySelectorAll(
-    "section, .details-container, .about-containers"
+    "section, .details-container, .about-containers",
   );
   elementsToAnimate.forEach((el) => {
     el.classList.add("fade-in");
@@ -331,7 +336,7 @@ function typeText() {
 // Start typing animation when page loads
 document.addEventListener("DOMContentLoaded", () => {
   const elementsToAnimate = document.querySelectorAll(
-    "section, .details-container, .about-containers"
+    "section, .details-container, .about-containers",
   );
   elementsToAnimate.forEach((el) => {
     el.classList.add("fade-in");
@@ -363,7 +368,7 @@ function animateSkillBars() {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.5 },
   );
 
   document.querySelectorAll(".details-container").forEach((container) => {
